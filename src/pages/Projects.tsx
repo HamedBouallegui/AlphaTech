@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { Layout } from "@/components/layout/Layout";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
@@ -63,102 +62,101 @@ const Projects = () => {
           content="Explore NexaTech's portfolio of successful projects across FinTech, Healthcare, Supply Chain, EdTech, and more. See our work in action."
         />
       </Helmet>
-      <Layout>
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 relative">
-          <div className="absolute inset-0 bg-gradient-hero" />
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-glow opacity-50" />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 relative">
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-glow opacity-50" />
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-up">
-                Our <span className="text-gradient">Projects</span>
-              </h1>
-              <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
-                A showcase of our work across industries. Each project represents our 
-                commitment to excellence and innovation.
-              </p>
-            </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-up">
+              Our <span className="text-gradient">Projects</span>
+            </h1>
+            <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
+              A showcase of our work across industries. Each project represents our 
+              commitment to excellence and innovation.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Projects Grid */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {projects.map((project, index) => (
-                <div
-                  key={project.title}
-                  className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift"
-                >
-                  {/* Image */}
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent" />
-                  </div>
+      {/* Projects Grid */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project) => (
+              <div
+                key={project.title}
+                className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift"
+              >
+                {/* Image */}
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent" />
+                </div>
 
-                  {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <span className="inline-block px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full mb-3">
-                      {project.category}
-                    </span>
-                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                      {project.description}
-                    </p>
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="inline-block px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full mb-3">
+                    {project.category}
+                  </span>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
 
-                    {/* Tech Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-xs rounded-md bg-secondary text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Hover Link */}
-                  <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/80 transition-colors">
-                      <ExternalLink className="w-5 h-5 text-primary-foreground" />
-                    </div>
+                  {/* Tech Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs rounded-md bg-secondary text-muted-foreground"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Stats Section */}
-        <section className="py-24 bg-card">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { value: "150+", label: "Projects Completed" },
-                { value: "50+", label: "Happy Clients" },
-                { value: "98%", label: "Client Satisfaction" },
-                { value: "15+", label: "Industries Served" },
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-4xl sm:text-5xl font-bold text-gradient mb-2">
-                    {stat.value}
+                {/* Hover Link */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/80 transition-colors">
+                    <ExternalLink className="w-5 h-5 text-primary-foreground" />
                   </div>
-                  <div className="text-muted-foreground text-sm">{stat.label}</div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        </section>
-      </Layout>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-24 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { value: "150+", label: "Projects Completed" },
+              { value: "50+", label: "Happy Clients" },
+              { value: "98%", label: "Client Satisfaction" },
+              { value: "15+", label: "Industries Served" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-gradient mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-muted-foreground text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
