@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from "lucide-react";
 
 const footerLinks = {
   company: [
@@ -18,7 +18,7 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Facebook, href: "#", label: "Facebook" },
 ];
@@ -98,14 +98,14 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-muted-foreground text-sm">
-                  123 Tech Plaza, Suite 400<br />
-                  San Francisco, CA 94105
+                  Sidi Bouzid, Tunisia
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <a href="tel:+1-555-123-4567" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  +1 (555) 123-4567
+                <a href="tel:+216 50281701" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  +216 50281701<br />
+                  +216 29019040
                 </a>
               </li>
               <li className="flex items-center gap-3">

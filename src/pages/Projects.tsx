@@ -3,12 +3,12 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "FinanceFlow Pro",
-    category: "FinTech",
+    title: "Ride Share Platform",
+    category: "Transportation",
     description:
-      "A comprehensive financial management platform featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
-    tech: ["React", "Node.js", "PostgreSQL", "TensorFlow", "AWS"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "A ride share platform that connects drivers with riders, featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
+    tech: ["React", "Node.js", "MongoDB", "express.js"],
+    image: "public/car.png",
   },
   {
     title: "HealthHub Connect",
