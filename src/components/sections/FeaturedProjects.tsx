@@ -4,25 +4,28 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "FinanceFlow Pro",
-    category: "FinTech Platform",
-    description: "A comprehensive financial management platform with real-time analytics, automated reporting, and AI-powered insights.",
-    tech: ["React", "Node.js", "PostgreSQL", "TensorFlow"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
+    title: "Ride Share Platform",
+    category: "Transportation",
+    description: "A ride share platform that connects drivers with riders, featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
+    tech: ["react", "Node.js", "MongoDB", "express.js"],
+    image: "public/car.png",
+    link: "https://couvoiturage-hayder-jacer.netlify.app/",
   },
   {
-    title: "HealthHub Connect",
-    category: "Healthcare App",
-    description: "Telemedicine platform connecting patients with healthcare providers, featuring video consultations and health tracking.",
-    tech: ["React Native", "Firebase", "WebRTC", "AWS"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
+    title: "Delivery App",
+    category: "E-commerce",
+    description: "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
+    tech: [" Flutter", "node.js", "mongodb", "express.js", "Docker"],
+    image: "public/delivery_app.png",
+    link: "https://github.com/HamedBouallegui/Delivery_App",
   },
   {
-    title: "LogiTrack Enterprise",
-    category: "Supply Chain",
-    description: "End-to-end supply chain management system with IoT integration, predictive analytics, and real-time tracking.",
-    tech: ["Vue.js", "Python", "MongoDB", "Docker"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=500&fit=crop",
+    title: "BLACKLISTED TRADERS",
+    category: "E-learning",
+    description: "Blacklisted Traders is an E-Learning platform that allows users to learn trading online.",
+    tech: ["React", "Node.js", "MongoDB", "express.js"],
+    image: "public/blacklisted.png",
+    link: "https://blacklistedtraders.netlify.app/",
   },
 ];
 
@@ -51,9 +54,12 @@ export const FeaturedProjects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 perspective-2000">
           {projects.map((project, index) => (
-            <div
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.title}
-              className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 card-3d shadow-3d hover:shadow-3d-hover"
+              className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 card-3d shadow-3d hover:shadow-3d-hover block"
             >
               {/* Image */}
               <div className="aspect-[16/10] overflow-hidden">
@@ -101,7 +107,7 @@ export const FeaturedProjects = () => {
                   <ExternalLink className="w-5 h-5 text-primary-foreground" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

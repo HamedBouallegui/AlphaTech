@@ -21,36 +21,40 @@ const projects = [
     link: "https://blacklistedtraders.netlify.app/",
   },
   {
-    title: "LogiTrack Enterprise",
-    category: "Supply Chain",
+    title: "CarWash App",
+    category: "E-Commerce",
     description:
-      "End-to-end supply chain management system with IoT integration, predictive analytics, and real-time tracking for global logistics.",
-    tech: ["Vue.js", "Python", "MongoDB", "Docker", "Kubernetes"],
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+      "🚗 CarWash App A mobile application for managing car wash bookings easily and efficiently. Built with Flutter for the frontend, Spring Boot for the backend, and MySQL as the database.",
+    tech: ["Flutter", "Spring Boot", "MySQL"],
+    image: "public/carwash.png",
+    link: "https://github.com/HamedBouallegui/Car_Wash"
   },
   {
-    title: "EduLearn Platform",
-    category: "EdTech",
+    title: "Library Managment",
+    category: "E-Learning",
     description:
-      "Interactive e-learning platform with live classes, progress tracking, gamification elements, and personalized learning paths.",
-    tech: ["Next.js", "GraphQL", "PostgreSQL", "Redis", "Stripe"],
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
+    tech: ["PHP", "Blade", "mysql", "Laravel"],
+    image: "public/library.png",
+    link: "https://github.com/HayderLabidi/libraray_managment"
   },
   {
-    title: "RetailMax POS",
-    category: "Retail",
+    title: "Travel App",
+    category: "Travel",
     description:
-      "Modern point-of-sale system with inventory management, customer analytics, and multi-location support for retail businesses.",
-    tech: ["React", "Electron", "SQLite", "Stripe", "Square API"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+      "A comprehensive travel application built with Flutter and Spring Boot, featuring destination discovery, booking, and itinerary management.",
+    tech: ["Flutter", "Spring Boot", "MySQL"],
+    image: "public/travel.png",
+    link: "https://github.com/HayderLabidi/Travel_app"
   },
   {
-    title: "GreenEnergy Dashboard",
-    category: "Energy",
+    title: "Delivery App",
+    category: "E-Commerce",
     description:
-      "Real-time energy monitoring dashboard for renewable energy installations with predictive maintenance and efficiency optimization.",
-    tech: ["Angular", "Python", "InfluxDB", "TensorFlow", "IoT"],
-    image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=800&h=600&fit=crop",
+      "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
+    tech: ["Flutter", "node.js", "mongodb", "express.js", "Docker"],
+    image: "public/delivery_app.png",
+    link: "https://github.com/HamedBouallegui/Delivery_App"
   },
 ];
 

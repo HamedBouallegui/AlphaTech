@@ -21,6 +21,7 @@ const services = [
     title: "Web Development",
     description:
       "Custom web applications built with modern technologies. From responsive marketing sites to complex enterprise platforms, we deliver scalable solutions.",
+    image: "/services/web.png", // Generated image
     features: [
       "React, Vue, Angular development",
       "Progressive Web Apps (PWA)",
@@ -34,6 +35,7 @@ const services = [
     title: "Mobile Applications",
     description:
       "Native and cross-platform mobile apps that deliver exceptional user experiences. We build for iOS, Android, and beyond.",
+    image: "/services/mobile.png",
     features: [
       "iOS & Android native apps",
       "React Native & Flutter",
@@ -47,6 +49,7 @@ const services = [
     title: "Presentation Creation",
     description:
       "Compelling visual storytelling for your business. We create professional presentations that engage your audience and deliver your message effectively.",
+    image: "/services/power.png",
     features: [
       "Corporate pitch decks",
       "Sales presentations",
@@ -60,6 +63,7 @@ const services = [
     title: "AI Solutions",
     description:
       "Harness the power of artificial intelligence to automate processes, gain insights, and create intelligent applications.",
+    image: "/services/ai.png",
     features: [
       "Machine learning models",
       "Natural language processing",
@@ -73,6 +77,7 @@ const services = [
     title: "Digital Marketing & Ads",
     description:
       "Boost your brand visibility and ROI with targeted digital marketing campaigns and strategic advertising solutions.",
+    image: "/services/ads.png",
     features: [
       "Social media advertising",
       "Google Ads (PPC) campaigns",
@@ -86,6 +91,7 @@ const services = [
     title: "Poster, Logo & CV Design",
     description:
       "Creative graphic design solutions to elevate your brand identity. From logos to marketing materials, we make you look your best.",
+    image: "/services/cv.png",
     features: [
       "Professional logo design",
       "Event posters & banners",
@@ -129,7 +135,7 @@ const Services = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
-            {services.map((service, index) => (
+            {services.map((service: any, index) => (
               <div
                 key={service.title}
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
@@ -144,7 +150,7 @@ const Services = () => {
                     {service.description}
                   </p>
                   <ul className="space-y-3 mb-8">
-                    {service.features.map((feature) => (
+                    {service.features.map((feature: string) => (
                       <li key={feature} className="flex items-center gap-3">
                         <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-primary" />
@@ -163,11 +169,24 @@ const Services = () => {
                 <div
                   className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
-                  <div className="aspect-[4/3] rounded-2xl bg-gradient-card border border-border overflow-hidden transform-3d-hover shadow-3d hover:shadow-3d-hover">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <service.icon className="w-32 h-32 text-primary/20 rotate-3d" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
+                  <div className="aspect-[4/3] rounded-2xl bg-gradient-card border border-border overflow-hidden transform-3d-hover shadow-3d hover:shadow-3d-hover group">
+                    {service.image ? (
+                      <div className="absolute inset-0">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60" />
+                      </div>
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <service.icon className="w-32 h-32 text-primary/20 rotate-3d" />
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
+                      </>
+                    )}
                   </div>
                   <div
                     className={`absolute -bottom-4 ${index % 2 === 0 ? "-right-4" : "-left-4"
@@ -204,9 +223,7 @@ const Services = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{phase.title}</h3>
                 <p className="text-muted-foreground text-sm">{phase.desc}</p>
-                {index < 3 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-border -z-10" />
-                )}
+
               </div>
             ))}
           </div>

@@ -82,21 +82,10 @@ const About = () => {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2016, Techora started with a simple vision: to help businesses
-                  harness the power of technology to achieve their goals. What began as a
-                  small team of three developers has grown into a full-service digital agency
-                  with over 30 talented professionals.
+                  Techora is an IT services company based in Sidi Bouzid, Tunisia, dedicated to delivering reliable and modern digital solutions. We specialize in web and application development, IT consulting, and innovative technology services tailored to meet business needs.
                 </p>
                 <p>
-                  Over the years, we've partnered with startups, enterprises, and everything
-                  in between, delivering solutions that drive real business results. Our
-                  commitment to quality and innovation has earned us the trust of clients
-                  across industries.
-                </p>
-                <p>
-                  Today, we continue to push boundaries, exploring emerging technologies
-                  like AI and machine learning while staying true to our core values of
-                  excellence, integrity, and collaboration.
+                  Our mission is to help startups and companies grow through smart, secure, and scalable technology. At Techora, we focus on quality, simplicity, and performance to turn ideas into effective digital products.
                 </p>
               </div>
             </div>
