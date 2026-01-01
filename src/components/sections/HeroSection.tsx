@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FloatingShapes } from "@/components/animations/FloatingShapes";
 
 export const HeroSection = () => {
   return (
@@ -8,20 +9,25 @@ export const HeroSection = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-glow animate-pulse-glow" />
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl float-3d" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl float-3d" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-2xl float-3d" style={{ animationDelay: '4s' }} />
+
+      {/* Unique Floating Shapes Animation */}
+      <FloatingShapes />
 
       {/* Grid Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px'
+          backgroundSize: '60px 60px',
+          zIndex: 2
         }}
       />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10" style={{ zIndex: 10 }}>
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="animate-fade-up">
@@ -32,14 +38,14 @@ export const HeroSection = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up-delay-1">
-            Digital Transformation
-            <span className="block text-gradient">&amp; Custom Solutions</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up-delay-1 perspective-1000">
+            <span className="block transform-3d-hover">Digital Transformation</span>
+            <span className="block text-gradient text-3d">&amp; Custom Solutions</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up-delay-2">
-            We craft cutting-edge software solutions that drive growth, 
+            We craft cutting-edge software solutions that drive growth,
             streamline operations, and position your business for the future.
           </p>
 
@@ -57,17 +63,17 @@ export const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 pt-10 border-t border-border/50">
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gradient">150+</div>
+          <div className="grid grid-cols-3 gap-8 mt-20 pt-10 border-t border-border/50 perspective-1000">
+            <div className="text-center card-3d p-4 rounded-xl">
+              <div className="text-3xl sm:text-4xl font-bold text-gradient">50+</div>
               <div className="text-sm text-muted-foreground mt-1">Projects Delivered</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gradient">50+</div>
+            <div className="text-center card-3d p-4 rounded-xl">
+              <div className="text-3xl sm:text-4xl font-bold text-gradient">30+</div>
               <div className="text-sm text-muted-foreground mt-1">Happy Clients</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gradient">8+</div>
+            <div className="text-center card-3d p-4 rounded-xl">
+              <div className="text-3xl sm:text-4xl font-bold text-gradient">3+</div>
               <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
             </div>
           </div>

@@ -60,13 +60,13 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - NexaTech | Get in Touch</title>
+        <title>Contact Us - Techora | Get in Touch</title>
         <meta
           name="description"
-          content="Contact NexaTech for your digital transformation needs. Reach out for web development, mobile apps, AI solutions, and more. We're here to help."
+          content="Contact Techora for your digital transformation needs. Reach out for web development, mobile apps, AI solutions, and more. We're here to help."
         />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-hero" />
@@ -78,7 +78,7 @@ const Contact = () => {
               Get in <span className="text-gradient">Touch</span>
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
-              Have a project in mind? We'd love to hear from you. Send us a message 
+              Have a project in mind? We'd love to hear from you. Send us a message
               and we'll respond as soon as possible.
             </p>
           </div>
@@ -190,7 +190,7 @@ const Contact = () => {
             <div className="order-1 lg:order-2">
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               <p className="text-muted-foreground mb-8">
-                Ready to start your digital transformation journey? Reach out 
+                Ready to start your digital transformation journey? Reach out
                 through any of these channels and we'll get back to you promptly.
               </p>
 
@@ -231,10 +231,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:hello@nexatech.io"
+                      href="mailto:hello@techora.io"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      hello@nexatech.io
+                      hello@techora.io
                     </a>
                   </div>
                 </div>

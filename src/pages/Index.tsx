@@ -8,10 +8,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>NexaTech - Digital Transformation & Custom Software Solutions</title>
-        <meta 
-          name="description" 
-          content="Transform your business with NexaTech's cutting-edge software solutions. Web development, mobile apps, AI solutions, and more. 150+ projects delivered." 
+        <title>Techora - Digital Transformation & Custom Software Solutions</title>
+        <meta
+          name="description"
+          content="Transform your business with Techora's cutting-edge software solutions. Web development, mobile apps, AI solutions, and more. 150+ projects delivered."
         />
       </Helmet>
       <HeroSection />

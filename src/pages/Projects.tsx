@@ -56,13 +56,13 @@ const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>Our Projects - NexaTech | Portfolio of Digital Solutions</title>
+        <title>Our Projects - Techora | Portfolio of Digital Solutions</title>
         <meta
           name="description"
-          content="Explore NexaTech's portfolio of successful projects across FinTech, Healthcare, Supply Chain, EdTech, and more. See our work in action."
+          content="Explore Techora's portfolio of successful projects across FinTech, Healthcare, Supply Chain, EdTech, and more. See our work in action."
         />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-hero" />
@@ -74,7 +74,7 @@ const Projects = () => {
               Our <span className="text-gradient">Projects</span>
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
-              A showcase of our work across industries. Each project represents our 
+              A showcase of our work across industries. Each project represents our
               commitment to excellence and innovation.
             </p>
           </div>
@@ -84,11 +84,11 @@ const Projects = () => {
       {/* Projects Grid */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 perspective-2000">
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift"
+                className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 card-3d shadow-3d hover:shadow-3d-hover"
               >
                 {/* Image */}
                 <div className="aspect-[16/10] overflow-hidden">
@@ -126,7 +126,7 @@ const Projects = () => {
                 </div>
 
                 {/* Hover Link */}
-                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity pulse-3d">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/80 transition-colors">
                     <ExternalLink className="w-5 h-5 text-primary-foreground" />
                   </div>
@@ -140,15 +140,15 @@ const Projects = () => {
       {/* Stats Section */}
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 perspective-1000">
             {[
               { value: "150+", label: "Projects Completed" },
               { value: "50+", label: "Happy Clients" },
               { value: "98%", label: "Client Satisfaction" },
               { value: "15+", label: "Industries Served" },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-gradient mb-2">
+              <div key={stat.label} className="text-center card-3d p-4 rounded-xl">
+                <div className="text-4xl sm:text-5xl font-bold text-gradient pulse-3d">
                   {stat.value}
                 </div>
                 <div className="text-muted-foreground text-sm">{stat.label}</div>

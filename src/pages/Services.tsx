@@ -10,6 +10,9 @@ import {
   BarChart3,
   ArrowRight,
   Check,
+  MonitorPlay,
+  Megaphone,
+  Palette,
 } from "lucide-react";
 
 const services = [
@@ -40,16 +43,16 @@ const services = [
     ],
   },
   {
-    icon: Database,
-    title: "CRM/ERP Integration",
+    icon: MonitorPlay,
+    title: "Presentation Creation",
     description:
-      "Streamline your operations with seamless enterprise system integration. Connect your tools and automate workflows.",
+      "Compelling visual storytelling for your business. We create professional presentations that engage your audience and deliver your message effectively.",
     features: [
-      "Salesforce implementation",
-      "Custom CRM development",
-      "ERP system integration",
-      "Data migration services",
-      "Workflow automation",
+      "Corporate pitch decks",
+      "Sales presentations",
+      "Conference slides",
+      "Interactive templates",
+      "Visual data storytelling",
     ],
   },
   {
@@ -66,29 +69,29 @@ const services = [
     ],
   },
   {
-    icon: Shield,
-    title: "Technical Audits & Support",
+    icon: Megaphone,
+    title: "Digital Marketing & Ads",
     description:
-      "Comprehensive security audits, performance optimization, and ongoing technical support to keep your systems running smoothly.",
+      "Boost your brand visibility and ROI with targeted digital marketing campaigns and strategic advertising solutions.",
     features: [
-      "Security vulnerability assessment",
-      "Performance optimization",
-      "Code quality review",
-      "24/7 technical support",
-      "Infrastructure monitoring",
+      "Social media advertising",
+      "Google Ads (PPC) campaigns",
+      "SEO optimization",
+      "Content marketing strategy",
+      "Email marketing automation",
     ],
   },
   {
-    icon: BarChart3,
-    title: "Business Intelligence",
+    icon: Palette,
+    title: "Poster, Logo & CV Design",
     description:
-      "Transform your data into actionable insights with custom dashboards, reporting tools, and analytics platforms.",
+      "Creative graphic design solutions to elevate your brand identity. From logos to marketing materials, we make you look your best.",
     features: [
-      "Custom dashboard development",
-      "Data visualization",
-      "Real-time reporting",
-      "KPI tracking systems",
-      "Data warehouse solutions",
+      "Professional logo design",
+      "Event posters & banners",
+      "Modern CV/Resume design",
+      "Brand identity packages",
+      "Marketing collateral",
     ],
   },
 ];
@@ -97,13 +100,13 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services - NexaTech | Web, Mobile, AI & Enterprise Solutions</title>
+        <title>Our Services - Techora | Web, Mobile, AI & Enterprise Solutions</title>
         <meta
           name="description"
-          content="Explore NexaTech's comprehensive services: web development, mobile apps, CRM/ERP integration, AI solutions, technical audits, and business intelligence."
+          content="Explore Techora's comprehensive services: web development, mobile apps, presentation creation, AI solutions, digital marketing, and graphic design."
         />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-hero" />
@@ -115,7 +118,7 @@ const Services = () => {
               Our <span className="text-gradient">Services</span>
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
-              End-to-end digital solutions designed to drive your business forward. 
+              End-to-end digital solutions designed to drive your business forward.
               From concept to deployment, we've got you covered.
             </p>
           </div>
@@ -129,12 +132,11 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 pulse-3d">
                     <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
@@ -161,16 +163,15 @@ const Services = () => {
                 <div
                   className={`relative ${index % 2 === 1 ? "lg:order-1" : ""}`}
                 >
-                  <div className="aspect-[4/3] rounded-2xl bg-gradient-card border border-border overflow-hidden">
+                  <div className="aspect-[4/3] rounded-2xl bg-gradient-card border border-border overflow-hidden transform-3d-hover shadow-3d hover:shadow-3d-hover">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <service.icon className="w-32 h-32 text-primary/20" />
+                      <service.icon className="w-32 h-32 text-primary/20 rotate-3d" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5" />
                   </div>
                   <div
-                    className={`absolute -bottom-4 ${
-                      index % 2 === 0 ? "-right-4" : "-left-4"
-                    } w-24 h-24 bg-primary/20 rounded-xl -z-10`}
+                    className={`absolute -bottom-4 ${index % 2 === 0 ? "-right-4" : "-left-4"
+                      } w-24 h-24 bg-primary/20 rounded-xl -z-10 float-3d`}
                   />
                 </div>
               </div>
@@ -190,14 +191,14 @@ const Services = () => {
               A proven methodology that ensures successful project delivery
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 perspective-1000">
             {[
               { step: "01", title: "Discovery", desc: "Understanding your needs and goals" },
               { step: "02", title: "Planning", desc: "Defining scope, timeline, and resources" },
               { step: "03", title: "Development", desc: "Building with agile methodology" },
               { step: "04", title: "Delivery", desc: "Launch, support, and iteration" },
             ].map((phase, index) => (
-              <div key={phase.step} className="relative text-center">
+              <div key={phase.step} className="relative text-center card-3d p-4 rounded-xl">
                 <div className="text-6xl font-bold text-primary/10 mb-4">
                   {phase.step}
                 </div>

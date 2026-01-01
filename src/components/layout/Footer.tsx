@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
 
 const footerLinks = {
   company: [
@@ -12,7 +12,7 @@ const footerLinks = {
     { name: "Web Development", path: "/services" },
     { name: "Mobile Apps", path: "/services" },
     { name: "AI Solutions", path: "/services" },
-    { name: "CRM Integration", path: "/services" },
+    { name: "Presentation Creation", path: "/services" },
   ],
 };
 
@@ -30,11 +30,15 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2 text-xl font-bold">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <Zap className="w-6 h-6 text-primary-foreground" />
+            <Link to="/" className="flex items-center gap-3 text-2xl font-bold group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+                <img
+                  src="/techora-logo.png"
+                  alt="Techora Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span>NexaTech</span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Techora</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Transforming businesses through innovative digital solutions. We build the future, one line of code at a time.
@@ -106,8 +110,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:hello@nexatech.io" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  hello@nexatech.io
+                <a href="mailto:hello@techora.io" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  hello@techora.io
                 </a>
               </li>
             </ul>
@@ -117,7 +121,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} NexaTech. All rights reserved.
+            © {new Date().getFullYear()} Techora. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">

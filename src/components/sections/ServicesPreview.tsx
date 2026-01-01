@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
-import { 
-  Globe, 
-  Smartphone, 
-  Database, 
-  Brain, 
-  Shield, 
+import {
+  Globe,
+  Smartphone,
+  Database,
+  Brain,
+  Shield,
   BarChart3,
-  ArrowRight 
+  ArrowRight,
+  MonitorPlay,
+  Megaphone,
+  Palette
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -22,9 +25,9 @@ const services = [
     description: "Native and cross-platform mobile solutions for iOS and Android.",
   },
   {
-    icon: Database,
-    title: "CRM/ERP Integration",
-    description: "Seamless integration of enterprise systems to streamline your operations.",
+    icon: MonitorPlay,
+    title: "Presentation Creation",
+    description: "Professional presentations and pitch decks that engage your audience.",
   },
   {
     icon: Brain,
@@ -32,14 +35,14 @@ const services = [
     description: "Machine learning and AI-powered tools to automate and optimize.",
   },
   {
-    icon: Shield,
-    title: "Technical Audits",
-    description: "Comprehensive security audits and performance optimization.",
+    icon: Megaphone,
+    title: "Digital Marketing & Ads",
+    description: "Targeted campaigns and SEO strategies to boost your brand visibility.",
   },
   {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description: "Data analytics dashboards and insights to drive decisions.",
+    icon: Palette,
+    title: "Poster, Logo & CV Design",
+    description: "Creative graphic design for logos, posters, and professional CVs.",
   },
 ];
 
@@ -48,7 +51,7 @@ export const ServicesPreview = () => {
     <section className="py-24 relative">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -61,14 +64,14 @@ export const ServicesPreview = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 perspective-2000">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group p-6 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover-lift card-shine"
+              className="group p-6 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 card-3d card-shine shadow-3d hover:shadow-3d-hover"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors pulse-3d">
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">

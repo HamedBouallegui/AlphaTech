@@ -51,25 +51,25 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - NexaTech | Our Story, Mission & Team</title>
-        <meta 
-          name="description" 
-          content="Learn about NexaTech's journey, our mission to transform businesses through technology, and meet our expert team of developers and designers." 
+        <title>About Us - Techora | Our Story, Mission & Team</title>
+        <meta
+          name="description"
+          content="Learn about Techora's journey, our mission to transform businesses through technology, and meet our expert team of developers and designers."
         />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-glow opacity-50" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 animate-fade-up">
               Building the <span className="text-gradient">Future</span> Together
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up-delay-1">
-              We're a team of passionate technologists dedicated to transforming 
+              We're a team of passionate technologists dedicated to transforming
               businesses through innovative digital solutions.
             </p>
           </div>
@@ -84,34 +84,34 @@ const About = () => {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Founded in 2016, NexaTech started with a simple vision: to help businesses 
-                  harness the power of technology to achieve their goals. What began as a 
-                  small team of three developers has grown into a full-service digital agency 
+                  Founded in 2016, Techora started with a simple vision: to help businesses
+                  harness the power of technology to achieve their goals. What began as a
+                  small team of three developers has grown into a full-service digital agency
                   with over 30 talented professionals.
                 </p>
                 <p>
-                  Over the years, we've partnered with startups, enterprises, and everything 
-                  in between, delivering solutions that drive real business results. Our 
-                  commitment to quality and innovation has earned us the trust of clients 
+                  Over the years, we've partnered with startups, enterprises, and everything
+                  in between, delivering solutions that drive real business results. Our
+                  commitment to quality and innovation has earned us the trust of clients
                   across industries.
                 </p>
                 <p>
-                  Today, we continue to push boundaries, exploring emerging technologies 
-                  like AI and machine learning while staying true to our core values of 
+                  Today, we continue to push boundaries, exploring emerging technologies
+                  like AI and machine learning while staying true to our core values of
                   excellence, integrity, and collaboration.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden">
+              <div className="aspect-square rounded-2xl overflow-hidden transform-3d-hover">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
-                  alt="NexaTech team collaboration"
+                  alt="Techora team collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/20 rounded-2xl -z-10" />
-              <div className="absolute -top-6 -right-6 w-48 h-48 bg-accent/20 rounded-2xl -z-10" />
+              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-primary/20 rounded-2xl -z-10 float-3d" />
+              <div className="absolute -top-6 -right-6 w-48 h-48 bg-accent/20 rounded-2xl -z-10 float-3d" style={{ animationDelay: '2s' }} />
             </div>
           </div>
         </div>
@@ -127,8 +127,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To empower businesses with innovative technology solutions that drive 
-                growth, efficiency, and competitive advantage. We believe every company 
+                To empower businesses with innovative technology solutions that drive
+                growth, efficiency, and competitive advantage. We believe every company
                 deserves access to world-class digital capabilities.
               </p>
             </div>
@@ -138,8 +138,8 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the leading digital transformation partner for businesses worldwide, 
-                known for our innovative solutions, exceptional quality, and the lasting 
+                To be the leading digital transformation partner for businesses worldwide,
+                known for our innovative solutions, exceptional quality, and the lasting
                 value we create for our clients.
               </p>
             </div>
@@ -158,13 +158,13 @@ const About = () => {
               The principles that guide everything we do
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 perspective-2000">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="p-6 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover-lift text-center"
+                className="p-6 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 card-3d text-center shadow-3d hover:shadow-3d-hover"
               >
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 pulse-3d">
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
@@ -186,13 +186,13 @@ const About = () => {
               The talented people behind our success
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 perspective-2000">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="group text-center"
+                className="group text-center card-3d"
               >
-                <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square">
+                <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square shadow-3d group-hover:shadow-3d-hover">
                   <img
                     src={member.image}
                     alt={member.name}

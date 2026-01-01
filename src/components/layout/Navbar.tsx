@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -43,12 +43,16 @@ export const Navbar = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-3 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-              <Zap className="w-6 h-6 text-primary-foreground" />
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
+              <img
+                src="/techora-logo.png"
+                alt="Techora Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <span className="hidden sm:block">NexaTech</span>
+            <span className="hidden sm:block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Techora</span>
           </Link>
 
           {/* Desktop Navigation */}

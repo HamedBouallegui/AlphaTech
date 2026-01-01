@@ -49,11 +49,11 @@ export const FeaturedProjects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 perspective-2000">
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 hover-lift"
+              className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 card-3d shadow-3d hover:shadow-3d-hover"
             >
               {/* Image */}
               <div className="aspect-[16/10] overflow-hidden">
@@ -96,7 +96,7 @@ export const FeaturedProjects = () => {
               </div>
 
               {/* Hover Link */}
-              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity pulse-3d">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                   <ExternalLink className="w-5 h-5 text-primary-foreground" />
                 </div>
