@@ -8,7 +8,7 @@ const projects = [
     category: "Transportation",
     description: "A ride share platform that connects drivers with riders, featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
     tech: ["react", "Node.js", "MongoDB", "express.js"],
-    image: "public/car.png",
+    image: "/car.png",
     link: "https://couvoiturage-hayder-jacer.netlify.app/",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     category: "E-commerce",
     description: "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
     tech: [" Flutter", "node.js", "mongodb", "express.js", "Docker"],
-    image: "public/delivery_app.png",
+    image: "/delivery_app.png",
     link: "https://github.com/HamedBouallegui/Delivery_App",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     category: "E-learning",
     description: "Blacklisted Traders is an E-Learning platform that allows users to learn trading online.",
     tech: ["React", "Node.js", "MongoDB", "express.js"],
-    image: "public/blacklisted.png",
+    image: "/blacklisted.png",
     link: "https://blacklistedtraders.netlify.app/",
   },
 ];

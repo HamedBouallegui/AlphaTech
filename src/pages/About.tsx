@@ -28,7 +28,7 @@ const team = [
   {
     name: "Hamed Bouallagui",
     role: "Full Stack Developer",
-    image: "public/hamed.png",
+    image: "/hamed.png",
     linkedin: "https://www.linkedin.com/in/hamed-bouallegui/",
     github: "https://github.com/HamedBouallegui",
     portfolio: "https://hamedbouallagui.vercel.app/",
@@ -36,7 +36,7 @@ const team = [
   {
     name: "Hayder Laabidi",
     role: "Mobile Developer",
-    image: "public/hayder.png",
+    image: "/hayder.png",
     linkedin: "https://www.linkedin.com/in/hayder-labidi/",
     github: "https://github.com/HayderLabidi",
     portfolio: "https://hayderlabidi.netlify.app/",

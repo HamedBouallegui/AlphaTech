@@ -8,7 +8,7 @@ const projects = [
     description:
       "A ride share platform that connects drivers with riders, featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
     tech: ["React", "Node.js", "MongoDB", "express.js"],
-    image: "public/car.png",
+    image: "/car.png",
     link: "https://couvoiturage-hayder-jacer.netlify.app/",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     description:
       "Blacklisted Traders is an E-Learning platform that allows users to learn trading online.",
     tech: ["React", "Node.js", "MongoDB", "express.js"],
-    image: "public/blacklisted.png",
+    image: "/blacklisted.png",
     link: "https://blacklistedtraders.netlify.app/",
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     description:
       "🚗 CarWash App A mobile application for managing car wash bookings easily and efficiently. Built with Flutter for the frontend, Spring Boot for the backend, and MySQL as the database.",
     tech: ["Flutter", "Spring Boot", "MySQL"],
-    image: "public/carwash.png",
+    image: "/carwash.png",
     link: "https://github.com/HamedBouallegui/Car_Wash"
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     description:
       "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
     tech: ["PHP", "Blade", "mysql", "Laravel"],
-    image: "public/library.png",
+    image: "/library.png",
     link: "https://github.com/HayderLabidi/libraray_managment"
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     description:
       "A comprehensive travel application built with Flutter and Spring Boot, featuring destination discovery, booking, and itinerary management.",
     tech: ["Flutter", "Spring Boot", "MySQL"],
-    image: "public/travel.png",
+    image: "/travel.png",
     link: "https://github.com/HayderLabidi/Travel_app"
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     description:
       "A cross-platform mobile application built with Flutter for a delivery service platform. The app supports multiple user roles with dedicated dashboards for clients, merchants, delivery drivers, and administrators.",
     tech: ["Flutter", "node.js", "mongodb", "express.js", "Docker"],
-    image: "public/delivery_app.png",
+    image: "/delivery_app.png",
     link: "https://github.com/HamedBouallegui/Delivery_App"
   },
 ];
