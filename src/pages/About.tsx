@@ -32,7 +32,7 @@ const team = [
     linkedin: "https://www.linkedin.com/in/hamed-bouallegui/",
     github: "https://github.com/HamedBouallegui",
     portfolio: "https://hamedbouallagui.vercel.app/",
-  },
+  }
 
 
 
